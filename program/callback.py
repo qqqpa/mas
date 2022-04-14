@@ -26,26 +26,26 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ اضفني الى مجموعتك ➕",
+                        "• اضفني الى مجموعتك",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("• تفعيل البوت", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("الاوامر الاساسية", callback_data="cbcmds"),
-                    InlineKeyboardButton("المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("• اوامر البوت", callback_data="cbcmds"),
+                    InlineKeyboardButton("• مطور السورس", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "قناة السورس", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "• قناة السورس", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "تحديثات البوت", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "• شروحات البوت", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "ملاحظة مهمة جدأ", url="https://t.me/Xl444/22"
+                        "• شراء بوت", url="https://t.me/a_bd80"
                     )
                 ],
             ]
@@ -68,11 +68,11 @@ async def cbguides(_, query: CallbackQuery):
 
 ℹ️ ** اذ لم ينضم حساب المساعد اكتب .اطلع , وبعد ذالك اكتب .انضم**
 
-ℹ️ ** اي مشكلة تواجها لاتتردد في التحدث مع المطور: @IIlIIIIIll**
+ℹ️ ** اي مشكلة تواجها لاتتردد في التحدث مع المطور: @a_bd80**
 
 ℹ️ __بواسطة  {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("رجوع", callback_data="cbstart")]]
+            [[InlineKeyboardButton("• رجوع •", callback_data="cbstart")]]
         ),
     )
 
@@ -88,12 +88,12 @@ async def cbcmds(_, query: CallbackQuery):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("👷🏻 اوامر المشرفين", callback_data="cbadmin"),
-                    InlineKeyboardButton("🧙🏻 اوامر المطور", callback_data="cbsudo"),
+                    InlineKeyboardButton("~ الاوامر الاساسيه 🔸", callback_data="cbadmin"),
+                    InlineKeyboardButton("~ اوامر المطورين 🔸", callback_data="cbsudo"),
                 ],[
-                    InlineKeyboardButton("📚 اوامر الاعضاء", callback_data="cbbasic")
+                    InlineKeyboardButton("~ اوامر المالك 🔹", callback_data="cbbasic")
                 ],[
-                    InlineKeyboardButton("🔙 رجوع", callback_data="cbstart")
+                    InlineKeyboardButton("• رجوع •", callback_data="cbstart")
                 ],
             ]
         ),
@@ -103,7 +103,7 @@ async def cbcmds(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbbasic"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 مرحبا بك هذا هي اوامر الاعضاء:
+        f"""~ هنا هو أوامر المالك 🔻
 
 » .شغل - لتشغيل اغنية بالرد على ملف صوتي
 » .تدفق - لتشغيل راديو بث مباشر
@@ -121,7 +121,7 @@ async def cbbasic(_, query: CallbackQuery):
 
 ℹ️ __بواسطة {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 رجوع", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("• رجوع •", callback_data="cbcmds")]]
         ),
     )
 
@@ -129,7 +129,7 @@ async def cbbasic(_, query: CallbackQuery):
 @Client.on_callback_query(filters.regex("cbadmin"))
 async def cbadmin(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 مرحبا بك هذا هي اوامر المشرفين:
+        f"""~ هنا الأوامر الأساسية 🔻
 
 » .توقف - لايقاف الاغنية مؤقتا
 » .استمرار - لاستمرار الاغنية المتوقفة
@@ -144,14 +144,14 @@ async def cbadmin(_, query: CallbackQuery):
 
 ℹ️ __بواسطة {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 رجوع", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("• رجوع •", callback_data="cbcmds")]]
         ),
     )
 
 @Client.on_callback_query(filters.regex("cbsudo"))
 async def cbsudo(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""🏮 مرحبا بك يامطوري في اوامرك التالية:
+        f"""~ هنا أوامر المطور 🔻
 
 » .امسح - تنظيف جميع الملفات الخام
 » .حدث - تحديث البوت الى اخر اصدار
@@ -162,7 +162,7 @@ async def cbsudo(_, query: CallbackQuery):
 
 ℹ️ __بواسطة {BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙 رجوع", callback_data="cbcmds")]]
+            [[InlineKeyboardButton("• رجوع •", callback_data="cbcmds")]]
         ),
     )
 
