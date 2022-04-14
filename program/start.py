@@ -63,26 +63,26 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ اضفني الى مجموعتك ➕",
+                        "• اضفني الى مجموعتك",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("طريقة التشغيل", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("• تفعيل البوت", callback_data="cbhowtouse")],
                 [
-                    InlineKeyboardButton("الاوامر الاساسية", callback_data="cbcmds"),
-                    InlineKeyboardButton("المطور", url=f"https://t.me/{OWNER_NAME}"),
+                    InlineKeyboardButton("• اوامر البوت", callback_data="cbcmds"),
+                    InlineKeyboardButton("• مطور السورس", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "قناة السورس", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "• قناة السورس", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "تحديثات البوت", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "• شروحات البوت", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "ملاحظة مهمة جدأ", url="https://t.me/Xl444/22"
+                        "• شراء بوت", url="https://t.me/a_bd80"
                     )
                 ],
             ]
@@ -102,9 +102,9 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("اوامر التشغيل", url=f"https://t.me/Xl444/31"),
+                InlineKeyboardButton("• قناة السورس", url=f"https://t.me/a_bd80"),
                 InlineKeyboardButton(
-                    "مطور السورس", url=f"https://t.me/IIlIIIIIll"
+                    "• مطور السورس", url=f"https://t.me/a_bd80"
                 ),
             ]
         ]
@@ -133,7 +133,7 @@ async def get_uptime(client: Client, message: Message):
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
-        "🤖 حاله البوت:\n"
-        f"• **المدة:** `{uptime}`\n"
-        f"• **وقت التشغيل:** `{START_TIME_ISO}`"
+        "▪️ حاله البوت:\n"
+        f"▫️ **المدة:** `{uptime}`\n"
+        f"▪️ **وقت التشغيل:** `{START_TIME_ISO}`"
     )
