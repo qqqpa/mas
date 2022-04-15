@@ -16,7 +16,7 @@ from config import (
 @Client.on_callback_query(filters.regex("cbstart"))
 async def cbstart(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""▪️ **أهـلا بك عزيزي » [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ✋🏼**\n
+        f"""▪️ **أهـلا بك عزيزي ✋🏼**\n
 ▫️ **انا بوت تشغيل الموسيقى في المكالمات الصوتية 🔉**
 
 ▪️ **يمكن اضافتي الى مجموعتك واستخدام الاوامر للتشغيل ❕*
