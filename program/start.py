@@ -52,7 +52,7 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""▪️ **أهـلا بك عزيزي » [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ✋🏼**\n
+        f"""▪️ **أهـلا بك عزيزي ✋🏼**\n
 ▫️ **انا بوت تشغيل الموسيقى في المكالمات الصوتية 🔉**
 
 ▪️ **يمكن اضافتي الى مجموعتك واستخدام الاوامر للتشغيل ❕*
