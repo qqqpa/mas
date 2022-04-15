@@ -52,12 +52,12 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""👋🏻 **هلا حب {message.from_user.mention()} !**\n
-🎗 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **انا روبوت لتشغيل الاغاني والموسيقى على منصة تليجرام!**
+        f"""▪️ **أهـلا بك عزيزي » [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) ✋🏼**\n
+▫️ **انا بوت تشغيل الموسيقى في المكالمات الصوتية 🔉**
 
-ℹ️ **لمعرفة اوامر هذا البوت اضغط على » الاوامر الاساسية!**
-
-ℹ️ **لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل!**
+▪️ **يمكن اضافتي الى مجموعتك واستخدام الاوامر للتشغيل ❕*
+▫️ **اضغط على الاوامر في الاسفل 🔻\n▪️للستفسار ارسل رسالة هنا : @e1r_a .**
+**—  —  —  —  —  —  —  —  —  —**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
@@ -82,7 +82,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "• شراء بوت", url="https://t.me/a_bd80"
+                        "• شراء بوت", url="https://t.me/e1r_a"
                     )
                 ],
             ]
@@ -92,7 +92,7 @@ async def start_(client: Client, message: Message):
 
 
 @Client.on_message(
-    command(["الحاله", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
+    command(["السورس", f"alive@{BOT_USERNAME}"]) & filters.group & ~filters.edited
 )
 async def alive(client: Client, message: Message):
     current_time = datetime.utcnow()
@@ -102,7 +102,7 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• قناة السورس", url=f"https://t.me/e1o_88"),
+                InlineKeyboardButton("• قناة السورس", url=f"https://t.me/e1r_1"),
                 InlineKeyboardButton(
                     "• مطور السورس", url=f"https://t.me/a_bd80"
                 ),
@@ -110,7 +110,7 @@ async def alive(client: Client, message: Message):
         ]
     )
 
-    alive = f"**ههلو {message.from_user.mention()}, i'm {BOT_NAME}**\n\nℹ️ البوت يعمل بشكل طبيعي\nℹ️ حساب المساعد: [{ALIVE_NAME}] \n\n**شكرا لاضافتي هنا لتششغيل الموسيقى على المحادثة الصوتية** 💖"
+    alive = f"**ههلو {message.from_user.mention()}, i'm {BOT_NAME}**\n\n▪️ البوت يعمل بشكل طبيعي\n▪️ حساب المساعد: [{ALIVE_NAME}] \n\n**شكرا لاضافتي هنا لتششغيل الموسيقى على المحادثة الصوتية** 💖"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
