@@ -56,7 +56,7 @@ async def start_(client: Client, message: Message):
 ▫️ **انا بوت تشغيل الموسيقى في المكالمات الصوتية 🔉**
 
 ▪️ **يمكن اضافتي الى مجموعتك واستخدام الاوامر للتشغيل ❕*
-▫️ **اضغط على الاوامر في الاسفل 🔻\n▪️للستفسار ارسل رسالة هنا : @e1r_a .**
+▫️ **اضغط على الاوامر في الاسفل 🔻\n▪️للستفسار ارسل رسالة هنا : @QQWGT .**
 **—  —  —  —  —  —  —  —  —  —**
 """,
         reply_markup=InlineKeyboardMarkup(
@@ -82,7 +82,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "• شراء بوت", url="https://t.me/e1r_a"
+                        "• شراء بوت", url="https://t.me/QQWGT"
                     )
                 ],
             ]
@@ -102,9 +102,9 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• قناة السورس", url=f"https://t.me/e1r_1"),
+                InlineKeyboardButton("• قناة السورس", url=f"https://t.me/iiiyy_p"),
                 InlineKeyboardButton(
-                    "• مطور السورس", url=f"https://t.me/a_bd80"
+                    "• مطور السورس", url=f"https://t.me/QQWGT"
                 ),
             ]
         ]
